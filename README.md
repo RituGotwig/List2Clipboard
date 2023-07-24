@@ -1,5 +1,5 @@
 # copy2clipboard
-Easy tool to copy multiple data from data sheets or manual inputs and pasting one input at a time on webpages (Eg. useful in- time tracking tools)
+Easy tool to copy multiple data entries from data sheets or through manual inputs and pasting one input at a time on webpages (Eg. useful in time tracking tools, statistical data entries etc.)
 
 #Step1: Copy the code below
 
