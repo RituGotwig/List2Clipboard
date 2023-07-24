@@ -163,6 +163,14 @@ function addNode() {
   node.appendChild(textnode);
   document.body.prepend(node);
 }
-
-
 ```
+#Step 2: Right click on the webpage where you want to paste the contents, select Inspect and go to Console tab
+#Step 3: Paste the code --> enter
+
+A pop-up should show up with instructions to enter your data. 
+
+#Important to note:
+- The tool accesses your clipboard
+- You can paste the copied elements using Ctrl+v or paste, and your elements are pasted in a series
+- You can use it for a single row or column of data at a time, for the next row just go for the new data option in the end
+- The tool aborts once you copy some other element from your web page while using it
