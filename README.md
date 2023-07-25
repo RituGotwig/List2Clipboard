@@ -1,10 +1,18 @@
-# copy2clipboard
-Easy tool to copy multiple data entries from data sheets or through manual inputs and pasting one input at a time on webpages (Eg. useful in time tracking tools, statistical data entries etc.)
+# List2Clipboard
+Easy Javascript tool which allows to copy multiple data entries into a virtual clipboard, and loops trough it one at a time with each paste.
+Useful for things like mass-import of excell stats into forms, timesheets, etc.
 
-## Step1: Copy the code below
+- The tool accesses your clipboard
+- You can paste the copied elements using Ctrl+v or paste, and your elements are pasted in a series
+- You can use it for a single row or column of data at a time, for the next row just go for the new data option in the end
+- The tool aborts if new text is copied into the clipboard
+
+## Instructions:
+Copy the following javascript code into your javascript console (accessible via your Browser Developer Tools), and an assistent popup will guide you trough the process :)
+
+### Step 1: Copy the code below (hover the text, and click the copy icon on the top right)
 
 ```
-
 let abortListener = new AbortController();
 
 introduction();
@@ -12,7 +20,7 @@ function introduction() {
   addNode();
   let selection = null;
   selection = prompt(
-    `𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤  📚𝘼𝙧𝙧𝙖𝙮 2️⃣𝘾𝙡𝙞𝙥𝙗𝙤𝙖𝙧𝙙 📋
+    `𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤  📚List 2️⃣𝘾𝙡𝙞𝙥𝙗𝙤𝙖𝙧𝙙 📋
 Iterate trough your text lists with your clipboard like a Pro!
 
 𝐏𝐥𝐞𝐚𝐬𝐞 𝐜𝐡𝐨𝐨𝐬𝐞 𝐭𝐡𝐞 𝐢𝐧𝐩𝐮𝐭 𝐭𝐲𝐩𝐞 𝐨𝐟 𝐲𝐨𝐮𝐫 𝐭𝐞𝐱𝐭 𝐥𝐢𝐬𝐭
@@ -164,13 +172,7 @@ function addNode() {
   document.body.prepend(node);
 }
 ```
-## Step 2: Right click on the webpage where you want to paste the contents, select Inspect and go to Console tab
-## Step 3: Paste the code --> enter
+### Step 2: Right click on the webpage where you want to paste the contents, select Inspect and go to Console tab
+### Step 3: Paste the code and hit enter
 
 A pop-up should show up with instructions to enter your data. 
-
-## Important to note:
-- The tool accesses your clipboard
-- You can paste the copied elements using Ctrl+v or paste, and your elements are pasted in a series
-- You can use it for a single row or column of data at a time, for the next row just go for the new data option in the end
-- The tool aborts once you copy some other element from your web page while using it
