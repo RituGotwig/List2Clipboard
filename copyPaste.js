@@ -1,4 +1,3 @@
-
 let abortListener = new AbortController();
 
 introduction();
@@ -6,7 +5,7 @@ function introduction() {
   addNode();
   let selection = null;
   selection = prompt(
-    `𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤  📚𝘼𝙧𝙧𝙖𝙮 2️⃣𝘾𝙡𝙞𝙥𝙗𝙤𝙖𝙧𝙙 📋
+    `𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤  📚List 2️⃣𝘾𝙡𝙞𝙥𝙗𝙤𝙖𝙧𝙙 📋
 Iterate trough your text lists with your clipboard like a Pro!
 
 𝐏𝐥𝐞𝐚𝐬𝐞 𝐜𝐡𝐨𝐨𝐬𝐞 𝐭𝐡𝐞 𝐢𝐧𝐩𝐮𝐭 𝐭𝐲𝐩𝐞 𝐨𝐟 𝐲𝐨𝐮𝐫 𝐭𝐞𝐱𝐭 𝐥𝐢𝐬𝐭
@@ -157,4 +156,3 @@ function addNode() {
   node.appendChild(textnode);
   document.body.prepend(node);
 }
-
