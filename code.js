@@ -28,6 +28,8 @@ For any other seperator: just specify, e.g. '-'`,
             inputPrompt("csv");
         } else if (selection == "e") {
             inputPrompt("excel");
+        } else if (selection == "automatic") {
+            inputPrompt("automatic");
         } else {
             inputPrompt(selection);
         }
@@ -53,14 +55,19 @@ function excelCase(input) {
 }
 
 function inputPrompt(seperatorType) {
-    const inputPromptTexts = {
-        automatic: "Please enter your text list. We auto recognize the seperator",
-        csv: "Please enter your array in CSV eg: 1, 2, 3...",
-        excel: "Please enter one row or column values from excel sheet",
-        custom: "Please enter your array with your custom seperator",
+    let input=null;
+    if(seperatorType=="excel" | seperatorType=="csv"| seperatorType=="automatic") {
+    let inputPromptTexts = {
+        automatic: "We will try to auto recognize the seperator",
+        csv: "Expected CSV format eg: 1, 2, 3...",
+        excel: "The values should correspond to one row or column values from excel sheet",
     };
-
-    let input = prompt(inputPromptTexts[seperatorType]);
+    input = prompt("Please enter your values. "+  inputPromptTexts[seperatorType]);
+    }
+    else
+    {
+        input = prompt("Please enter your values seperated by : "+ seperatorType)
+    }
 
     if (!input) {
         introduction();
@@ -74,7 +81,7 @@ function inputPrompt(seperatorType) {
                 alert(
                     "Sorry, we could not recognize the seperator. Please specify the seperator manualy."
                 );
-                this.selectionCheck();
+                this.introduction();
                 return;
             }
         } else {
