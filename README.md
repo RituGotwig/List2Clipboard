@@ -112,7 +112,7 @@ function inputPrompt(seperatorType) {
         let clipboardArray = input.split(seperatorType);
         if (clipboardArray.length <= 1) {
             alert("Invalid input, please try again");
-            checkCSV();
+            inputPrompt(seperatorType);
         } else {
             alert(`Your values are ${clipboardArray} `);
             let index = 0;
