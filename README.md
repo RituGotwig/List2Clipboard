@@ -1,6 +1,6 @@
 # List2Clipboard
 Easy Javascript tool which allows to copy multiple data entries into a virtual clipboard, and loops trough it one at a time with each paste.
-Useful for things like mass-import of excell stats into forms, timesheets, etc.
+Useful for things like mass-import of excel stats into forms, timesheets, etc.
 
 - The tool accesses your clipboard
 - You can paste the copied elements using Ctrl+v or paste, and your elements are pasted in a series
